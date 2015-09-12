@@ -5,7 +5,7 @@ import akka.actor._
 import akka.routing.RoundRobinRouter
 
 object BitcoinMiner extends App {
-  calculate(nrOfWorkers = 1, nrOfZeroes = 7)
+  calculate(nrOfWorkers = 4, nrOfZeroes = 3)
 
   sealed trait BitcoinMessage
   case object Calculate extends BitcoinMessage
@@ -41,11 +41,12 @@ object BitcoinMiner extends App {
       // Generate random string
       // Use SHA 256 to see hashed string
       var bitcoin =""
+      var str = ""
       while(!satisfyCondition(nrOfZeroes, bitcoin)) {
-        bitcoin = generateRandomString
-        bitcoin = getSHA256Hash(bitcoin)
+        str = generateRandomString
+        bitcoin = getSHA256Hash(str)
       }
-      bitcoin
+      str + ": " + bitcoin
     }
 
     def randomStringFromCharList(length: Int, chars: Seq[Char]): String = {
