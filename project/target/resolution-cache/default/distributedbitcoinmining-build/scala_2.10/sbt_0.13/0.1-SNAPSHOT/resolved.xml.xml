@@ -4,7 +4,7 @@
 		module="distributedbitcoinmining-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150911061715"
+		publication="20150913185544"
 		e:scalaVersion="2.10" e:sbtVersion="0.13"
 	>
 		<description>

@@ -4,7 +4,7 @@
 		module="distributedbitcoinmining$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20150911061723"
+		publication="20150913222109"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
